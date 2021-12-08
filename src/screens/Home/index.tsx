@@ -29,16 +29,37 @@ export function Home() {
   const [data, setData] = useState<LoginListDataProps>([]);
 
   async function loadData() {
+     // Get asyncStorage data, use setSearchListData and setData
+     //JSON.parse antes de adicionar as informações no estado, já que elas virão no formato de string do AsyncStorage. 
+
     const dataKey = '@savepass:logins';
-    // Get asyncStorage data, use setSearchListData and setData
+    const response = await AsyncStorage.getItem(dataKey);
+    const responseFormatted =  JSON.parse(response)
+
+    if(responseFormatted){
+      setData(responseFormatted);
+      setSearchListData(responseFormatted);
+    }
   }
 
   function handleFilterLoginData() {
     // Filter results inside data, save with setSearchListData
+      const searchFiltterd = searchListData.filter( data =>{
+        const isValid = data.service_name.toLowerCase().includes(searchText.toLowerCase())
+
+        if(isValid){ //includes = inclui o termo que o usuario pesquisou
+          return data
+        }
+      })
+      setSearchListData(searchFiltterd)
   }
 
   function handleChangeInputText(text: string) {
-    // Update searchText value
+
+  if(!text){
+    setSearchListData(data)
+  }
+    setSearchText(text);
   }
 
   useFocusEffect(useCallback(() => {
@@ -49,8 +70,8 @@ export function Home() {
     <>
       <Header
         user={{
-          name: 'Rocketseat',
-          avatar_url: 'https://i.ibb.co/ZmFHZDM/rocketseat.jpg'
+          name: 'Luiz Andre',
+          avatar_url: 'https://avatars.githubusercontent.com/u/74063154?v=4'
         }}
       />
       <Container>
@@ -60,7 +81,6 @@ export function Home() {
           value={searchText}
           returnKeyType="search"
           onSubmitEditing={handleFilterLoginData}
-
           onSearchButtonPress={handleFilterLoginData}
         />
 
