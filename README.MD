@@ -7,4 +7,4 @@ Essa aplicação possui duas telas, sendo a primeira delas uma listagem das senh
 - React navigation 
 - styled components
 
-Para utlizar esse repositorio, clone o projeto e rode o comando YARNS
+Para utlizar esse repositorio, clone o projeto e rode o comando YARN
