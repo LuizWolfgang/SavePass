@@ -9,6 +9,6 @@ Essa aplicação possui duas telas, sendo a primeira delas uma listagem das senh
 
 Para utlizar esse repositorio, clone o projeto e rode o comando YARN
 
-![Simulator Screen Shot - iPhone 11 - 2022-06-17 at 17 01 10](https://user-images.githubusercontent.com/74063154/174393804-8e0fdd64-56ec-45b9-9cca-08dde2c53194.png)
-![Simulator Screen Shot - iPhone 11 - 2022-06-17 at 17 01 27](https://user-images.githubusercontent.com/74063154/174393809-93ccc880-168c-41b2-b8bc-06518686d410.png)
-![Screen Shot 2022-06-17 at 17 02 42](https://user-images.githubusercontent.com/74063154/174393942-5af74445-a5cd-4d35-86eb-152936febc00.png)
+
+![Screen Shot 2022-06-17 at 17 03 16](https://user-images.githubusercontent.com/74063154/174394071-f65c0e7e-4f59-449e-9b2b-0ad6e24aa81b.png)
+![Screen Shot 2022-06-17 at 17 03 29](https://user-images.githubusercontent.com/74063154/174394077-b8c0ca3a-61ed-4fe0-acd7-7e3e62eaa569.png)
